@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+
+stage('verification code'){
+  steps{
+    echo "code ok depuis le depots distant"
+  }
+}
+stage('archivage du resultat'){
+
+steps{
+archiveArtifact artifact: 'helloworld.html', fingerprint: true
+}
+}
+}
